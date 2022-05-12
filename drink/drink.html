@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>food</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_sec.css">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+</head>
+
+<body>
+<div id="header"></div><div id="h"></div>
+    <header>
+    <a href="../index.html" class="logo">Еда<span>.</span>ru</a>
+    <ul>
+        <li><a href="../index.html">Дом</a></li>
+        <li><a href="#h">В начало</a></li>
+        <li><a href="../INFO/INFO.html">Информация</a></li>
+        <li><a href="../index.html #konact">Контакты</a></li>
+    </ul>
+    </header>
+    <!--****************-->
+    <section class="about">
+        <div class="row">
+            <div class="col50">
+                <h2><span>З</span>аголовок</h2>
+                <br>
+                <p>Просто Кофе<span>.</span></p>
+                <br><br><br><br><br><br><br><br><br>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="img/drink4.jpg" alt="loadind">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <section class="about">
+        <div class="row">
+            <div class="col50">
+                <h2><span>З</span>аголовок</h2>
+                <br>
+                <p>Просто Чай<span>.</span></p>
+                <br><br><br><br><br><br><br><br><br>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="img/drink3.jpg" alt="loadind">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <script type="text/javascript">
+        const bg = document.getElementById('h');
+        window.addEventListener('scroll',
+        function(){
+            bg.style.backgroundSize = Math.round(110+window.pageYOffset/20)+'%';
+            /**/
+        });
+    </script> 
+   <script type="text/javascript"> /*Когда прокручивает страницу, в теге header поятляется тег stycky*/
+    window.addEventListener('scroll',
+    function(){
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky",window.scrollY > 100);
+    });
+</script>
+</body>
+</html>
+<!--
+   <script type="text/javascript"> /*Когда прокручивает страницу, в теге header поятляется тег stycky*/
+        window.addEventListener('scroll',
+        function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky",window.scrollY > 100);
+        });
+    </script>
+-->

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>food</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+</head>
+
+<body>
+<div id="header"></div><div id="h"></div>
+    <header>
+    <a href="../index.html" class="logo">Еда<span>.</span>ru</a>
+    <ul>
+        <li><a href="../index.html">Дом</a></li>
+        <li><a href="#h">В начало</a></li>
+        <li><a href="../INFO/INFO.html">Информация</a></li>
+        <li><a href="../index.html#kontact">Контакты</a></li>
+    </ul>
+    </header>
+    <!--****************-->
+    <section class="about">
+        <div class="row">
+            <div class="col50">
+                <h2><span>Р</span>ецепт теста с рулетом из говядины</h2>
+                <p>Ингредиенты:</p>
+                <ol onclick="alert('К сожалению это не кнопа');">
+                    <li>700 грамм муки Twins Chakra Flour</li>
+                    <li>300 г муки Blue Triangle</li>
+                    <li>15 грамм растворимых дрожжей</li>
+                    <li>15 граммов йодированной соли</li>
+                    <li>60 грамм сахара</li>
+                    <li>3 грамма улучшителя хлеба</li>
+                    <li>100 г яиц (2 яйца)</li>
+                    <li>450 граммов ледяной воды</li>
+                    <li>100 грамм маргарина</li>
+                    <li>500 г теста для шортенинга (слоеное)</li>
+                    <li>1 красный перец, нарезанный</li>
+                    <li>1 зеленый перец, нарезанный</li>
+                    <li>50 г нарезанного лука-порея</li>
+                    <li>100 грамм тертого сыра пармезан</li>
+                </ol>    
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="img/burger4(640).jpg" alt="loadind">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <section class="about">
+        <div class="row">
+            <div class="col50">
+                <h2><span>П</span>ростой рецепт домашнего чизбургера</h2>
+                <p>Ингредиенты:</p> 
+
+                <ol onclick="alert('К сожалению это не кнопа');">    <!--  //<A HREF="#" onclick="alert('Hello, world!');">Нажми</A>-->
+                    <li>Говяжий фарш - 400 гр.</li>
+                    <li>Помидор - 1 шт.</li>
+                    <li>Лук репчатый -1 шт.</li>
+                    <li>Листья салата -1 пучок.</li>
+                    <li>Плавленный сыр - 3 ломтика.</li>
+                    <li>Булочки для гамбургеров - 3 шт.</li>
+                    <li>Соусы, соль и перец по вкусу<span>.</span>
+                </ol>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="img/boorger61280.jpg" alt="loadind">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <script type="text/javascript"> /* приближение фона при прокрючивании окна */
+        const bg = document.getElementById('h');
+        window.addEventListener('scroll',
+        function(){
+            bg.style.backgroundSize = Math.round(110+window.pageYOffset/20)+'%';
+            /**/
+        });
+    </script> 
+   <script type="text/javascript"> /*Когда прокручивает страницу, в теге header поятляется тег stycky*/
+        window.addEventListener('scroll',
+        function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky",window.scrollY > 100);
+        });
+    </script>
+
+    <script type="text/javascript">
+        var a = ol;
+        oneclik
+        if (a == 100){alert('Nan')}
+    </script>
+</body>
+</html>

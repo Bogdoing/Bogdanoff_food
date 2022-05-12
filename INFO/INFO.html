@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title> INFO </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        span{
+            color: #ff0157;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><span>B</span>ogdanoff<span>.</span></a>
+        <script></script>
+    </header>
+
+    <div class="accordion">
+        <div class="contentBx">
+            <div class="label">Про работу</div>
+            <div class="contenet">
+                <ul>
+                    <li>Выбор темы дался мне довольно трудно. Перед тем как я определился было уже написанно 3 рарианта курсовой. Как видите остановился я на теме для которой проще всего искать материал. Фото взяты с сайта <a href="https://www.pexels.com" target="_blank">pexels.com</a> </li>
+                    <li>Рецепты взяты с реальных сайтов ориентированных на приготовлении еды</li>
+                </ul>
+            </div>
+        </div>
+        <!---->
+        <div class="contentBx">
+            <div class="label">О разработке</div>
+            <div class="contenet">
+                <ul>
+                    <li>Ссылка на pdf отчёт: <a href="../Отчёт Богданов+.pdf">Отчёт</a></li>
+                    <li>Очень странно что отчёт в формате word весил у меня 35мб</li>
+                </ul>
+            </div>
+        </div>
+        <!---->
+        <div class="contentBx">
+            <div class="label">Ссылки на все страницы </div>
+            <div class="contenet">
+                <ul>
+                    <li><a href="../index.html">Главная страница</a></li>
+                    <li><a href="../food/Food.html">Фаст-Фуд</a></li>
+                    <li><a href="../East/East.html">Восточная еда</a></li>
+                    <li><a href="../sweets/sweets.html">Сладости</a></li>
+                    <li><a href="../drink/drink.html">Напитки</a></li>
+                    <li><a href="../Happy/txt1.html"><span>H</span>appy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const accordion = document.getElementsByClassName('contentBx');
+        for (i = 0; i<accordion.length; i++ ){
+            accordion[i].addEventListener('click', function(){
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+</body>
+</html>
+<!--
+
+    <script>
+        const accordion = document.getElementsByClassName('contentBx');
+        for (i = 0; i<accordion.length; i++ ){
+            accordion[i].addEventListener('click', function(){
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+
+-->
