@@ -62,6 +62,61 @@ header ul li a{
 }
 /*/HEADER/*/
 
+@media (max-width: 991px){
+    header, header.sticky{
+        padding: 10px 20px;        
+    }
+    header ul{
+        display: none;
+    }
+    /**/
+    header .navigation.active{
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.45); 
+        backdrop-filter: blur(8px); /* This be the blur */
+        /*background: #fff;*/
+    }
+    header .navigation li{
+        margin-left: 0;
+    }
+    header .navigation li a{
+        color: #111;
+        font-size: 1.6em;
+    }
+    .menuToggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url("lib/menu.png");
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer; 
+        transition: 0.1s;       
+    }
+    .menuToggle.active{
+        background: url("lib/close.png");
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: 0.1s;
+    }
+    header.sticky .menuToggle{
+        /*filter: invert(1);*/
+        backdrop-filter: blur(800px); /* This be the blur */
+    }
+}
+
+/*/HEADER MEDIA/*/
+
 /*slider*/
 .slider{
     position: relative;
@@ -89,7 +144,7 @@ header ul li a{
 }
 .slider input[type="radio"]:checked + .imgBx{
     z-index: 9;
-    clip-path: circle(1000px at center);
+    clip-path: circle(2500px at center);
     transition-delay: 0.55s;
 }
 .slider .imgBx img{

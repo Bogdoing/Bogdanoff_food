@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="header"></div><div id="h"></div>
     <header>
         <a href="#banner" class="logo">Еда<span>.</span>ru</a>
-        <ul>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
             <li><a href="#banner">Дом</a></li>
             <li><a href="#h">В начало</a></li>
             <li><a href="INFO/INFO.html">Информация</a></li>
             <li><a href="#konact">Контакты</a></li>
         </ul>
+
     </header>
-        
+
     <div class="slider">
         <input type="radio" name="slider" checked="checked">
         <div class="imgBx" id="banner">
@@ -45,7 +48,7 @@
                 <p>Восточная еда</p>
                 <a href="East/East.html">Узнать больше</a>
             </div>
-        </div> 
+        </div>
         <input type="radio" name="slider">
         <div class="imgBx">
             <img src="img/mini_sneck.jpg">
@@ -63,18 +66,20 @@
                 <p>Напитки</p>
                 <a href="drink/drink.html">Узнать больше</a>
             </div>
-        </div>   
+        </div>
     </div>
+
     <div class="socks">
         <div class="sleft">
             <h3>Информация<span>.</span></h3>
-            <p>Сайт создан студентом ВГТУ(бПИ-202).<br/> Богдановым Вадимом Юрьевичом</p>
+            <p>Сайт создан студентом ВГТУ(бПИ-202).<br /> Богдановым Вадимом Юрьевичом</p>
             <p>2020г</p>
         </div>
         <div class="sright">
             <h3>Контактная Информация<span>.</span></h3>
             <a href="mailto:Vadim.bogdanov.03@inbox.ru">Vadim.bogdanov.03@inbox.ru</a>
-            <form action="mailto:Vadim.bogdanov.03@inbox.ru" enctype="text/plain">    <!--!!!!!Form-->
+            <form action="mailto:Vadim.bogdanov.03@inbox.ru" enctype="text/plain">
+                <!--!!!!!Form-->
                 <p><input name="a"><input type="submit"></p>
             </form>
             <p>Почта для связи</p>
@@ -82,62 +87,67 @@
             <!---->
             <form class="form1" name="form1">
                 <span id="buttons">
-                  <input type="button" name="button1" value="Отлично"/>
-                  <input type="button" name="button2" value="Хорошо"/>
-                  <input type="button" name="button3" value="Тек себе"/>
+                    <input type="button" name="button1" value="Отлично" />
+                    <input type="button" name="button2" value="Хорошо" />
+                    <input type="button" name="button3" value="Тек себе" />
                 </span>
 
-                <input name="reset" type="reset"/>
+                <input name="reset" type="reset" />
             </form>
             <!---->
         </div>
     </div>
     <div align="center" class="end" id="konact">Bogdanoff.inc for 2020</div>
-    
-    <script type="text/javascript"> /*Когда прокручиваем страницу, в теге header поятляется класс stycky*/
-        window.addEventListener('scroll',
-        function(){
-            const header = document.querySelector('header');
-            header.classList.toggle("sticky",window.scrollY > 100);
-        });
-    </script>
-    <script type="text/javascript">  /*Скрипт для получения отзывов*/
-        var ot, buttonsDiv=document.getElementById("buttons");
 
-        for (var i=1; i<=3; i++) {
+    <script type="text/javascript">
+        /*Когда прокручиваем страницу, в теге header поятляется класс stycky*/
+        window.addEventListener('scroll',
+            function () {
+                const header = document.querySelector('header');
+                header.classList.toggle("sticky", window.scrollY > 100);
+            });
+    </script>
+
+    <script src="script.js"></script>
+
+
+    <script type="text/javascript">  /*Скрипт для получения отзывов*/
+        var ot, buttonsDiv = document.getElementById("buttons");
+
+        for (var i = 1; i <= 3; i++) {
             var button = document.form1["button" + i];
-            button.onclick = function() {
+            button.onclick = function () {
                 ot = this.value;
-                if (ot == 'Отлично'){
+                if (ot == 'Отлично') {
                     alert("Спасибо за оценку")
                 }
-                else if (ot == 'Хорошо'){
+                else if (ot == 'Хорошо') {
                     alert("Спаибо за оценку мы будем стараться ещё усердней ")
                 }
-                else{
+                else {
                     alert("Приходите завтра. Уверен вы поменяете своё решение")
                 }
                 buttonsDiv.style.display = 'none';
             }
         }
-        document.form1.reset.onclick = function() {
+        document.form1.reset.onclick = function () {
             var x = 0;
-            x=prompt("Вы уверенны (Введите 'да' или 'нет'):", "");
-            switch(x) {
+            x = prompt("Вы уверенны (Введите 'да' или 'нет'):", "");
+            switch (x) {
                 case 'да':  // if (x === 'value1')
                     speed = null;
                     alert("Можете оставить новый отзыв");
                     buttonsDiv.style.display = 'inline';
-                break;
+                    break;
                 case 'нет':
                     alert('ok');
-                break;
+                    break;
                 default:
-                    alert( "Вы ввели что-то странное. Попробуйте ещё.");
-            return true;
+                    alert("Вы ввели что-то странное. Попробуйте ещё.");
+                    return true;
             }
         }
     </script>
 </body>
-</html>
 
+</html>
